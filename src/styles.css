@@ -1,0 +1,9 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Merriweather Sans', sans-serif;
+    background-color: #F2D653;
+    color: #37424A;
+}
