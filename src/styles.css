@@ -7,3 +7,45 @@ body {
     background-color: #F2D653;
     color: #37424A;
 }
+
+.container {
+    width: 800px;
+    max-width: 100%;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.meal {
+    display: flex;
+    background-color: #fff;
+    border-radius: 5px;
+    overflow: hidden;
+}
+
+.meal-img {
+   flex: 1;
+}
+
+.meal-img img {
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+}
+
+.meal-details {
+    flex: 2;
+    padding: 20px;
+}
+
+.meal-title {
+    margin: 0 0 20px;
+
+}
+
+.meal-instructions {
+
+}
+
+.meal-info {
+
+}

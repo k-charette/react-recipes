@@ -12,8 +12,9 @@ import './styles.css'
 const App = () => {
   return (
     <div>
-      Hi
-      <RandomMeal />
+      <section className='container'>
+        <RandomMeal />
+      </section>
     </div>
   );
 }
