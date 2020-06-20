@@ -13,6 +13,7 @@ const App = () => {
   return (
     <div>
       <section className='container'>
+        <h2> Featured Meal </h2>
         <RandomMeal />
       </section>
     </div>

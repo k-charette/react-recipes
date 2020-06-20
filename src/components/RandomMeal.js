@@ -28,13 +28,14 @@ const RandomMeal = () => {
         }
 
         getMeal()
+
     }, [])
 
     console.log(meal)
 
     if (!meal) return null
 
-    const { strMeal, strCategory, strArea, strInstructions, strMealThumb, } = meal
+    const { strMeal, strCategory, strArea, strInstructions, strMealThumb, strYoutube } = meal
 
     return (
         <div className='meal'>
@@ -42,18 +43,26 @@ const RandomMeal = () => {
                 <img src={strMealThumb} alt='meal pics'/>
             </div>
             <div className='meal-details'>
-                <h2 className='meal-title'>{strMeal}</h2>
-                <p className='meal-instructions'>{strInstructions.substring(0, 99) + '...'}</p>
+                <h1 className='meal-title'>{strMeal}</h1>
+                <p className='meal-instructions'>{strInstructions.substring(0, 100) + '...'}</p>
                 <ul className='meal-info'>
                     <li>
-                        Category:
+                        Category
                         <strong className='meal-category'> {strCategory} </strong>
                     </li>
                     <li>
-                        Area:
+                        Area
                         <strong className='meal-area'> {strArea} </strong>
                     </li>
+                    <li>
+                        Video Instructions 
+                        <a href={strYoutube} target="_blank" rel="noopener noreferrer"><strong className='meal-video'> Here</strong></a>
+                    </li>
                 </ul>
+
+                <button className='btn-view-recipe'>
+                    View Recipe 
+                </button>
             </div>
         </div>
     )
