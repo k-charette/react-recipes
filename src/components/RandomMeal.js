@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react'
+import Meal from './Meal'
 
 const API_URL = 'https://www.themealdb.com/api/json/v1/1/random.php'
 
@@ -31,40 +32,13 @@ const RandomMeal = () => {
 
     }, [])
 
-    console.log(meal)
-
     if (!meal) return null
-
-    const { strMeal, strCategory, strArea, strInstructions, strMealThumb, strYoutube } = meal
-
+    
     return (
-        <div className='meal'>
-            <div className='meal-img'>
-                <img src={strMealThumb} alt='meal pics'/>
-            </div>
-            <div className='meal-details'>
-                <h1 className='meal-title'>{strMeal}</h1>
-                <p className='meal-instructions'>{strInstructions.substring(0, 100) + '...'}</p>
-                <ul className='meal-info'>
-                    <li>
-                        Category
-                        <strong className='meal-category'> {strCategory} </strong>
-                    </li>
-                    <li>
-                        Area
-                        <strong className='meal-area'> {strArea} </strong>
-                    </li>
-                    <li>
-                        Video Instructions 
-                        <a href={strYoutube} target="_blank" rel="noopener noreferrer"><strong className='meal-video'> Here</strong></a>
-                    </li>
-                </ul>
-
-                <button className='btn-view-recipe'>
-                    View Recipe 
-                </button>
-            </div>
-        </div>
+        <section className='container'>
+            <h2> Featured Meal </h2> 
+            <Meal meal={meal}/>
+        </section>
     )
 }
 
