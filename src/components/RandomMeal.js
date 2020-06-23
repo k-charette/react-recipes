@@ -33,10 +33,10 @@ const RandomMeal = () => {
     }, [])
 
     if (!meal) return null
-    
+
     return (
-        <section className='container'>
-            <h2> Featured Meal </h2> 
+        <section className='container m-auto p-20'>
+            <h2 className='text-2xl font-bold mb-4'> Featured Meal </h2> 
             <Meal meal={meal}/>
         </section>
     )

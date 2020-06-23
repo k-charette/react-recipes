@@ -3,7 +3,6 @@ import RandomMeal from './components/RandomMeal'
 import Meal from './components/Meal'
 import Search from './components/Search'
 
-import './styles.css'
 import './styles/app.css'
 
 // TODOS
@@ -16,7 +15,6 @@ import './styles/app.css'
 const App = () => {
   return (
     <div>
-
       <Search />
       <RandomMeal />
 
