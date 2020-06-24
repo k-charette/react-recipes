@@ -7,12 +7,12 @@ const Meal = ({ meal }) => {
     const {strMealThumb, strMeal, strInstructions, strCategory, strArea, strYoutube} = meal
 
     return (
-        <div className='bg-white rounded flex flex-wrap'>
-            <div className='w-1/3 rounded overflow-hidden'>
+        <div className='bg-white rounded flex flex-wrap w-auto'>
+            <div className='md:w-1/4 w-full rounded overflow-hidden'>
                 <img src={strMealThumb} alt={strMeal}/>
             </div>
-            <div className='w-2/3 p-5'>
-                <h1 className='meal-title'>{strMeal}</h1>
+            <div className='p-5'>
+                <h1 className='text-lg'>{strMeal}</h1>
                 <p className='meal-instructions'>{strInstructions && strInstructions.substring(0, 100) + '...'}</p>
                 <ul className='meal-info'>
                     <li>
