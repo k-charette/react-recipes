@@ -7,29 +7,29 @@ const Meal = ({ meal }) => {
     const {strMealThumb, strMeal, strInstructions, strCategory, strArea, strYoutube} = meal
 
     return (
-        <div className='bg-white rounded flex flex-wrap w-auto'>
-            <div className='md:w-1/4 w-full rounded overflow-hidden'>
-                <img src={strMealThumb} alt={strMeal}/>
+        <div className='bg-white rounded shadow-lg flex m-auto'>
+            <div className='w-1/3'>
+                <img className='w-full rounded rounded-right-0 h-full object-cover' src={strMealThumb} alt={strMeal}/>
             </div>
-            <div className='p-5'>
-                <h1 className='text-lg'>{strMeal}</h1>
-                <p className='meal-instructions'>{strInstructions && strInstructions.substring(0, 100) + '...'}</p>
-                <ul className='meal-info'>
-                    <li>
-                        Category
-                        <strong className='meal-category'> {strCategory} </strong>
+            <div className='w-2/3 p-5 relative'>
+                <h1 className='text-2xl font-semibold text-blue-900'>{strMeal}</h1>
+                <p className='text-md my-3 text-gray-700'>{strInstructions && strInstructions.substring(0, 100) + '...'}</p>
+                <ul className='flex'>
+                    <li className='mr-8'>
+                        <span className='text-gray-900'>Category</span>
+                        <strong className='block text-blue-900'> {strCategory} </strong>
                     </li>
-                    <li>
-                        Area
-                        <strong className='meal-area'> {strArea} </strong>
+                    <li className='mr-8'> 
+                        <span className='text-gray-900'>Area</span>
+                        <strong className='block text-blue-900'> {strArea} </strong>
                     </li>
-                    <li>
-                        Video Instructions 
-                        <a href={strYoutube} target="_blank" rel="noopener noreferrer"><strong className='meal-video'> Here</strong></a>
+                    <li className='mr-8'>
+                        <span className='text-gray-900'>Video Instructions</span> 
+                        <a href={strYoutube} target="_blank" rel="noopener noreferrer"><strong className='block text-blue-900'> Here</strong></a>
                     </li>
                 </ul>
 
-                <button className='btn-view-recipe'>
+                <button className='bg-blue-900 text-white rounded px-5 py-3 absolute bottom-0 right-0 -mr-3 -mb-3'>
                     View Recipe 
                 </button>
             </div>
