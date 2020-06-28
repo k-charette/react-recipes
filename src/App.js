@@ -14,11 +14,9 @@ import './styles/app.css'
 
 const App = () => {
   return (
-    <div id ='main-div' className='flex flex-wrap justify-center items-center '>
+    <div className='container mx-auto p-10'>
       <Search />
       <RandomMeal />
-
-      <Meal />
     </div>
   );
 }
